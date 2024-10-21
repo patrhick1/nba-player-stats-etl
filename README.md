@@ -65,14 +65,14 @@ This project demonstrates skills in web scraping, data cleaning, database operat
    cd nba-player-stats-etl
 
 
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-
-pip install -r requirements.txt
-
-Set up environment variables for Database
-
-python nba_stats_scraper.py
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   
+   pip install -r requirements.txt
+   
+   Set up environment variables for Database
+   
+   python nba_stats_scraper.py
 
 
 
@@ -130,33 +130,5 @@ Instructions on how to use the project after installation.
 Data is sourced from [Basketball Reference](https://www.basketball-reference.com/leagues/NBA_2024_per_game.html). Please review their terms of service and usage policies before using the data.
 
 **Disclaimer:** This project is for educational purposes only.
-
-
-## Configuration
-
-To keep your database credentials secure, the script uses environment variables. Here's how you can set them up:
-
-### On Windows
-
-1. Open the **System Properties** dialog (`Win + Pause/Break`).
-2. Click on **Advanced system settings**.
-3. Click on **Environment Variables**.
-4. Under **User variables**, click **New** and add the following:
-
-   - **Variable name**: `DB_USER`
-   - **Variable value**: Your MySQL username (e.g., `root`)
-
-   Repeat this for `DB_PASSWORD`, `DB_HOST`, `DB_NAME`, and `DB_PORT`.
-
-### On macOS and Linux
-
-Add the following lines to your `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc` file:
-
-```bash
-export DB_USER='your_username'
-export DB_PASSWORD='your_password'
-export DB_HOST='localhost'
-export DB_NAME='nba_stats'
-export DB_PORT='3306'
 
 
