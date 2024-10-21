@@ -63,17 +63,33 @@ This project demonstrates skills in web scraping, data cleaning, database operat
    ```bash
    git clone https://github.com/patrhick1/nba-player-stats-etl.git
    cd nba-player-stats-etl
-
-
+   ```
+2. **Set Up a Virtual Environment**
+   ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   
-   pip install -r requirements.txt
-   
-   Set up environment variables for Database
-   
-   python nba_stats_scraper.py
+   ```
 
+   # On Windows
+   ```bash
+   source venv/bin/activate
+   ```
+   
+   # On Windows, use
+   ```bash
+   `venv\Scripts\activate`
+   ```
+
+3. **Install the Dependencies**
+   ```bash 
+   pip install -r requirements.txt
+   ```
+   
+4. **Set up environment variables for Database**
+   Follow the instructions in the Configuration section below to set up your environment variables for database credentials.
+
+   ```bash
+   python nba_stats_scraper.py
+   ```
 
 
 ## **Usage**
@@ -86,13 +102,12 @@ Example SQL query:
    
    ```sql
    SELECT * FROM player_stats WHERE Points_Per_Game > 20 ORDER BY Points_Per_Game DESC;
-
+   ```
 
 
 #### **Configuration**
    
 Detailed instructions on setting environment variables.
-
 
 
 To keep your database credentials secure, the script uses environment variables. Here's how you can set them up:
@@ -119,6 +134,7 @@ Add the following lines to your `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc` fi
    export DB_HOST='localhost'
    export DB_NAME='nba_stats'
    export DB_PORT='3306'
+   ```
    
 
 ## Data Source
